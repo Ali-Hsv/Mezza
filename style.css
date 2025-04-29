@@ -1,0 +1,289 @@
+:root {
+    --main-color: #222;
+    --accent-color: #E67349;
+    --white-color: #fff;
+    --gray-color: #666;
+    --font-main: 'Nunito', sans-serif;
+    --font-title: 'Montserrat', sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-main);
+}
+
+body {
+    line-height: 1.6;
+    background-color: var(--white-color);
+}
+
+/* Header Styles */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--white-color);
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    transition: all 0.3s ease-in-out;
+}
+
+.header.sticky {
+    background-color: var(--main-color);
+    padding: 10px 50px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-family: var(--font-title);
+    font-size: 1.8rem;
+    color: var(--main-color);
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.header.sticky .logo {
+    color: var(--white-color);
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--main-color);
+    transition: color 0.3s ease;
+}
+
+.header.sticky .nav-links a {
+    color: var(--white-color);
+}
+
+.nav-links a:hover {
+    color: var(--accent-color);
+}
+
+/* Icons */
+.icons {
+    display: flex;
+    gap: 20px;
+}
+
+.icon {
+    font-size: 1.5rem;
+    color: var(--main-color);
+    cursor: pointer;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.icon:hover {
+    transform: scale(1.1);
+    color: var(--accent-color);
+}
+
+.header.sticky .icon {
+    color: var(--white-color);
+}
+
+/* Main content */
+.hero-section {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;  
+    background: url('furniture.jpg') no-repeat center center/cover;
+    text-align: center;
+    color: var(--white-color);
+    background-image: url(.//img_furniro/background.png);
+}
+
+.hero-text {
+    font-size: 2.5rem;
+    font-family: var(--font-title);
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    color: var(--gray-color);
+}
+
+.btn {
+    padding: 10px 30px;
+    background-color: var(--accent-color);
+    border: none;
+    color: var(--white-color);
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #c5633d;
+}
+/* About section */
+
+.about-section{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+    font-size: 30px;
+    padding-bottom: 30px;
+    background-color: #a181761f;
+    color: var(--gray-color);
+    font-family: var(--font-main);
+}
+
+/* Category section */
+.category-section {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    background-color: var(--white-color);
+}
+
+.category {
+    text-align: center;
+    color: var(--gray-color);
+}
+
+.category img {
+    max-width: 350px;
+    margin-bottom: 10px;
+    border-radius: 9px;
+    transition-duration: 500ms;
+}
+
+.category img:hover{
+    max-width: 360px;
+    box-shadow: 3px 3px 10px var(--gray-color);
+    transition: box-shadow 0.4s;
+    transition: max-width 0.4s;
+}
+
+.category-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 7vw;
+}
+
+/* Products section */
+
+.products-section{
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    font-size: 21px;
+    color: var(--gray-color);
+}
+
+.products{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 
+                           minmax(300px, 1fr));
+    width: 990px;
+}
+
+.products div{
+    padding: 10px;
+    border-radius: 9px;
+    color: var(--gray-color);
+}
+
+.products div:hover{
+    background-color: #66666609;
+    color: var(--main-color);
+    box-shadow: 3px 3px 10px var(--gray-color);
+    transition: box-shadow 0.4s, background-color 0.4s, color 0.3s;
+}
+
+.products img{
+    width: 100%;
+    margin-bottom: 15px;
+    border-radius: 9px;
+}
+
+.footer {
+    background-color: var(--main-color);
+    color: var(--white-color);
+    padding: 40px 0;
+    font-family: var(--font-main);
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.footer-section {
+    width: 30%;
+}
+
+.footer-section h2, .footer-section h3 {
+    font-family: var(--font-title);
+    margin-bottom: 20px;
+}
+
+.footer-section p {
+    font-size: 0.9rem;
+    line-height: 1.8;
+}
+
+.footer-section a {
+    display: block;
+    margin-bottom: 10px;
+    color: var(--white-color);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section a:hover {
+    color: var(--accent-color);
+}
+
+.footer-section .contact p {
+    margin-bottom: 10px;
+}
+
+.footer-section .contact i {
+    margin-right: 10px;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 0.8rem;
+    background-color: #1a1a1a;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-section {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}
